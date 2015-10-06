@@ -3,22 +3,14 @@ Rails.application.routes.draw do
   get 'portfolio' => 'static_pages#portfolio'
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> filling-in-layout
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-<<<<<<< HEAD
   # root 'application#hello'
-=======
-  
->>>>>>> filling-in-layout
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
