@@ -1,9 +1,18 @@
 /* mixin, variables, etc... */
 
-@mixin centering {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+@mixin vertical_align {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.float_right {
+	float: right;
+}
+
+.float_left {
+	float: left;
 }
 
 /* typography */
@@ -28,9 +37,9 @@ p {
 
 #logo {
 	float: left;
-	margin-right: 10px;
+	margin-left: 20px;
 	font-size: 1.5em;
-	color: white;
+	color: #111111;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-weight: bold;
@@ -43,15 +52,11 @@ p {
 /* footer */
 
 footer {
-	margin-top: 45px;
-	padding-top: 5px;
-	border-top: 1px solid #eaeaea;
 	color: #777;
-	height: 3em;
-	background-color: #333;
-	small {
-		text-align: center;
-	}
+	height: 5em;
+	line-height: -2em;
+	background-color: white; //#313330;
+	@include vertical_align;
 }
 
 /* home */
@@ -63,9 +68,12 @@ footer {
 	-o-background-size: cover;
 	background-size: cover;
 	height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	width: 95vw;
+	margin: auto;
+	@include vertical_align;
+	h1{
+		font-weight: bold;
+		font-size: 5em;
+	}
+	h2 {font-size: 3em;}
 }
