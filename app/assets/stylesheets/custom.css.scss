@@ -6,6 +6,40 @@
 	width: 100%;
 }
 
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+}
+
+h1 {
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.5em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+}
+
 /* footer */
 
 footer {
@@ -13,7 +47,25 @@ footer {
 	padding-top: 5px;
 	border-top: 1px solid #eaeaea;
 	color: #777;
+	height: 3em;
+	background-color: #333;
 	small {
 		text-align: center;
 	}
+}
+
+/* home */
+
+#home_container {
+	background: url(pluto.png) no-repeat center center fixed;	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
