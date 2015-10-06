@@ -1,1 +1,1 @@
-An art portfolio built with Rails
+A portfolio built with Ruby on Rails 4 and Foundation 5
