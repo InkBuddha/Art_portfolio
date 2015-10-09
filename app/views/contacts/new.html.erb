@@ -1,9 +1,38 @@
-<%= simple_form_for @contact do |f| %>
-	<%= f.input :name, required: true %>
-	<%= f.input :email, required: true %>
-	<%= f.input :message, :as => :text, required: true %>
-	<div class="hidden">
-	  <%= f.input :nickname, :hint => "Leave this field blank" %>
+<% provide(:title, "Contact") %>
+<div id="contact_container">
+	<h1>Contact Us</h1>
+
+	<div class="row">
+		<%= simple_form_for @contact do |f| %>
+
+			<div class="row">
+				<div class="small-6 columns">
+					<%= f.input :name, required: true %>
+				</div>
+			
+				<div class="small-6 columns">
+					<%= f.input :email, required: true %>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 columns" >
+					<%= f.input :message, :as => :text, required: true, :input_html => { :rows => 13 } %>
+				</div>
+			</div>
+
+			<div class="hidden">
+			  <%= f.input :nickname, :hint => "Leave this field blank" %>
+			</div>
+
+		<div class="row">
+			<div class="small-12 columns" >
+				<%= f.button :submit, 'Send message' %>
+			</div>
+		</div>
+
+
+		<% end %>
+
 	</div>
-	<%= f.button :submit, 'Send message' %>
-<% end %>
+</div>

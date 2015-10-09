@@ -7,12 +7,32 @@
 	align-items: center;
 }
 
+@mixin bg_size_cover {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+$color_red: #b62020;
+
+
+/* general */
+
 .float_right {
 	float: right;
 }
 
 .float_left {
 	float: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
 }
 
 /* typography */
@@ -44,7 +64,7 @@ p {
 	letter-spacing: -1px;
 	font-weight: bold;
 	&:hover {
-		color: white;
+		color: $color_red;
 		text-decoration: none;
 	}
 }
@@ -55,7 +75,7 @@ footer {
 	color: #777;
 	height: 5em;
 	line-height: -2em;
-	background-color: white; //#313330;
+	background-color: white;
 	@include vertical_align;
 }
 
@@ -63,10 +83,7 @@ footer {
 
 #home_container {
 	background: url(pluto.png) no-repeat center center fixed;	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	@include bg_size_cover;
 	height: 100vh;
 	width: 95vw;
 	margin: auto;
@@ -77,3 +94,42 @@ footer {
 	}
 	h2 {font-size: 3em;}
 }
+
+/* contact us */
+
+#contact_container {
+	h1 {
+		margin-top: 1em;
+		margin-bottom: 1.5em;
+	}
+}
+
+	// flash
+
+	.alert-error {
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+	text-align: left;
+	}
+
+	.alert-alert {
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+	text-align: left;
+	}
+
+	.alert-success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+	text-align: left;
+	}
+
+	.alert-notice {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+	text-align: left;
+	}

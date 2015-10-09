@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'portfolio' => 'static_pages#portfolio'
   get 'about' => 'static_pages#about'
-  get 'contact' => 'static_pages#contact'
+  get 'contact' => 'contacts#new'
 
   #Send email routes
   match '/contacts',     to: 'contacts#new',             via: 'get'
