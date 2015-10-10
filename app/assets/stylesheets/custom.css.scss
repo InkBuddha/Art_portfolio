@@ -14,6 +14,12 @@
 	background-size: cover;
 }
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 $color_red: #b62020;
 
 
@@ -95,6 +101,16 @@ footer {
 	h2 {font-size: 3em;}
 }
 
+/* about */
+
+#about_container {
+	p {
+		margin-top: 2em;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+}
+
 /* contact us */
 
 #contact_container {
@@ -104,32 +120,22 @@ footer {
 	}
 }
 
-	// flash
+#thx_container {
+	p{text-align: center;}
+}
 
-	.alert-error {
-	background-color: #f2dede;
-	border-color: #eed3d7;
-	color: #b94a48;
-	text-align: left;
-	}
+#flash_container {
+	margin-top: 3em;
+}
 
-	.alert-alert {
-	background-color: #f2dede;
-	border-color: #eed3d7;
-	color: #b94a48;
-	text-align: left;
-	}
+/* miscellaneous */
 
-	.alert-success {
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	text-align: center;
 	background-color: #dff0d8;
-	border-color: #d6e9c6;
-	color: #468847;
-	text-align: left;
-	}
-
-	.alert-notice {
-	background-color: #dff0d8;
-	border-color: #d6e9c6;
-	color: #468847;
-	text-align: left;
-	}
+	@include box_sizing;
+}
