@@ -9,9 +9,9 @@
 
 @mixin bg_size_cover {
 	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	-moz-background-size: 	 cover;
+	-o-background-size: 		 cover;
+	background-size:  			 cover;
 }
 
 @mixin box_sizing {
@@ -20,7 +20,12 @@
   box-sizing:         border-box;
 }
 
-$color_red: #b62020;
+	// color variables
+
+	$color_red: #b62020;
+	$dark_grey: #111;
+	$medium_grey: #777;
+	$light_grey: #999;
 
 
 /* general */
@@ -65,7 +70,7 @@ p {
 	float: left;
 	margin-left: 20px;
 	font-size: 1.5em;
-	color: #111111;
+	color: $dark_grey;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-weight: bold;
@@ -78,7 +83,7 @@ p {
 /* footer */
 
 footer {
-	color: #777;
+	color: $medium_grey;
 	height: 5em;
 	line-height: -2em;
 	background-color: white;
@@ -88,7 +93,7 @@ footer {
 /* home */
 
 #home_container {
-	background: url(pluto.png) no-repeat center center fixed;	
+	background: url(pluto.png) $light_grey no-repeat center center fixed;	
 	@include bg_size_cover;
 	height: 100vh;
 	width: 95vw;
