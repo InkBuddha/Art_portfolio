@@ -224,7 +224,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   simple_form
   spring (~> 1.1.3)
-  sqlite3
+  sqlite3 (~> 1.3.9)
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)

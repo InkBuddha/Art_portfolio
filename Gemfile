@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-	gem 'sqlite3'
+	gem 'sqlite3', '~> 1.3.9'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring', '~> 1.1.3'
